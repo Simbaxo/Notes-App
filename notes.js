@@ -14,6 +14,15 @@ const findNote = function (notes, noteTitle) {
     return note.title.toLowerCase() === noteTitle.toLowerCase()
   })
 }
+const findNotes = function (notes, query) {
+  return filteredNotes = notes.filter(function (note, index) {
+    const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
+    const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase())
+    return isTitleMatch || isBodyMatch
+  })
+}
+
+console.log(findNotes(notes, 'eating'))
 
 // const findNote = function (notes, noteTitle) {
 //   const index = notes.findIndex(function (note) {
