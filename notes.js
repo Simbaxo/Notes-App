@@ -41,3 +41,7 @@ const findNotes = function (notes, query) {
 
 sortNotes(notes)
 console.log(notes)
+
+document.querySelector('button').addEventListener('click', function (e) {
+  e.target.textContent = 'The button was clicked'
+})
