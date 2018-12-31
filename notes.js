@@ -70,7 +70,6 @@ document.querySelector('#search-text').addEventListener('input', function (e) {
   renderNotes(notes, filters)
 })
 
-document.querySelector('#name-form').addEventListener('submit', function (e) {
-  e.preventDefault()
-  e.target.elements.firstName.value = ''
+document.querySelector('#filter-by').addEventListener('change', function (e) {
+  console.log(e.target.value)
 })
