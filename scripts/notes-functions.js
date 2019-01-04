@@ -114,19 +114,3 @@ const renderNotes = (notes, filters) => {
 
 // Generate the last edited message
 const generateLastEdited = (timestamp) => `Last edited ${moment(timestamp).fromNow()}`
-
-// Find Note
-const findNote = (notes, noteTitle) => {
-  return notes.find((note) => {
-    return note.title.toLowerCase() === noteTitle.toLowerCase()
-  })
-}
-
-// Find Notes
-const findNotes = (notes, query) => {
-  return filteredNotes = notes.filter((note) => {
-    const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
-    const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase())
-    return isTitleMatch || isBodyMatch
-  })
-}
